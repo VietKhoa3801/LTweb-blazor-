@@ -1,0 +1,70 @@
+﻿@page "/"
+
+<SfSmithchart>
+    <SmithchartTitle Text="Impedance Transmission"></SmithchartTitle>
+    <SmithchartLegendSettings Visible="true">
+    </SmithchartLegendSettings>
+    <SmithchartSeriesCollection>
+        <SmithchartSeries Points="PointSeries" Fill="#0F94C4" Name="Tranmission 1">
+            <SmithchartSeriesMarker Visible="true">
+                <SmithchartSeriesDatalabel Visible="true">
+                </SmithchartSeriesDatalabel>
+            </SmithchartSeriesMarker>
+            <SmithchartSeriesTooltip Visible="true">
+            </SmithchartSeriesTooltip>
+        </SmithchartSeries>
+        <SmithchartSeries DataSource="@TransmissionSeries" Name="Tranmission 2"
+            Resistance="Resistancevalue" Reactance="Reactancevalue" Fill="#EE0C88">
+            <SmithchartSeriesMarker Visible="true">
+            </SmithchartSeriesMarker>
+            <SmithchartSeriesTooltip Visible="true">
+            </SmithchartSeriesTooltip>
+        </SmithchartSeries>
+    </SmithchartSeriesCollection>
+</SfSmithchart>
+
+@code {
+
+    public class ChartData
+    {
+        public double Resistancevalue { get; set; }
+        public double Reactancevalue { get; set; }
+    }
+
+    public List<ChartData> TransmissionSeries = new List<ChartData>
+    {
+       new ChartData { Resistancevalue= 10, Reactancevalue= 25 },
+       new ChartData { Resistancevalue= 8, Reactancevalue= 6 },
+       new ChartData { Resistancevalue= 6, Reactancevalue= 4.5 },
+       new ChartData { Resistancevalue= 4.5, Reactancevalue= 2 },
+       new ChartData { Resistancevalue= 3.5, Reactancevalue= 1.6 },
+       new ChartData { Resistancevalue= 2.5, Reactancevalue= 1.3 },
+       new ChartData { Resistancevalue= 2, Reactancevalue= 1.2 },
+       new ChartData { Resistancevalue= 1.5, Reactancevalue= 1 },
+       new ChartData { Resistancevalue= 1, Reactancevalue= 0.8 },
+       new ChartData { Resistancevalue= 0.5, Reactancevalue= 0.4 },
+       new ChartData { Resistancevalue= 0.3, Reactancevalue= 0.2 },
+       new ChartData { Resistancevalue= 0.001, Reactancevalue= 0.15 }
+    };
+
+    public List<ISmithChartPoint> PointSeries = new List<ISmithChartPoint>
+    {
+       new ISmithChartPoint { Resistance= 20, Reactance= -50 },
+       new ISmithChartPoint { Resistance= 10, Reactance= -10 },
+       new ISmithChartPoint { Resistance= 9, Reactance= -4.5 },
+       new ISmithChartPoint { Resistance= 8, Reactance= -3.5 },
+       new ISmithChartPoint { Resistance= 7, Reactance= -2.5 },
+       new ISmithChartPoint { Resistance= 6, Reactance= -1.5 },
+       new ISmithChartPoint { Resistance= 5, Reactance= -1 },
+       new ISmithChartPoint { Resistance= 4.5, Reactance= -0.5 },
+       new ISmithChartPoint { Resistance= 2, Reactance= 0.5 },
+       new ISmithChartPoint { Resistance= 1.5, Reactance= 0.4 },
+       new ISmithChartPoint { Resistance= 1, Reactance= 0.4 },
+       new ISmithChartPoint { Resistance= 0.5, Reactance= 0.2 },
+       new ISmithChartPoint { Resistance= 0.3, Reactance= 0.1 },
+       new ISmithChartPoint { Resistance= 0.001, Reactance= 0.05 }
+    };
+
+}
+
+

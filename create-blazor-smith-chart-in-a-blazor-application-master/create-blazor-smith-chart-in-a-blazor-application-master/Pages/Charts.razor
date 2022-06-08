@@ -1,0 +1,39 @@
+﻿@page "/charts"
+
+
+    <SfChart Title="Monthly Sales Analysis">
+        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"
+         Title="Months">
+        </ChartPrimaryXAxis>
+        <ChartPrimaryYAxis Title="Sales">
+        </ChartPrimaryYAxis>
+        <ChartLegendSettings Visible="true"> </ChartLegendSettings>
+        <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
+        <ChartSeriesCollection>
+            <ChartSeries Type="ChartSeriesType.Column" DataSource="@Sales"
+              XName="Month" YName="SalesValue" Name="Sales">
+                <ChartMarker>
+                    <ChartDataLabel Visible="true"> </ChartDataLabel>
+                </ChartMarker>
+            </ChartSeries>
+        </ChartSeriesCollection>
+    </SfChart>
+
+@code {
+    public class SalesData
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+
+    public List<SalesData> Sales = new List<SalesData> 
+    {
+        new SalesData { Month = "January", SalesValue = 35 },
+        new SalesData { Month = "February", SalesValue = 28 },
+        new SalesData { Month = "March", SalesValue = 34 },
+        new SalesData { Month = "April", SalesValue = 32 },
+        new SalesData { Month = "May", SalesValue = 40 },
+        new SalesData { Month = "June", SalesValue = 32 },
+        new SalesData { Month = "July", SalesValue = 35 }
+    };
+}

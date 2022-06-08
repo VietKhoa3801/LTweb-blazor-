@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Viet Khoa\\Downloads\\create-blazor-smith-chart-in-a-blazor-application-master\\create-blazor-smith-chart-in-a-blazor-application-master\\BlazorExample.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Viet Khoa\\Downloads\\create-blazor-smith-chart-in-a-blazor-application-master\\create-blazor-smith-chart-in-a-blazor-application-master\\BlazorExample.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viet Khoa\\Downloads\\create-blazor-smith-chart-in-a-blazor-application-master\\create-blazor-smith-chart-in-a-blazor-application-master\\BlazorExample.csproj",
+        "projectName": "BlazorExample",
+        "projectPath": "C:\\Users\\Viet Khoa\\Downloads\\create-blazor-smith-chart-in-a-blazor-application-master\\create-blazor-smith-chart-in-a-blazor-application-master\\BlazorExample.csproj",
+        "packagesPath": "C:\\Users\\Viet Khoa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viet Khoa\\Downloads\\create-blazor-smith-chart-in-a-blazor-application-master\\create-blazor-smith-chart-in-a-blazor-application-master\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Viet Khoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Syncfusion.Blazor": {
+              "target": "Package",
+              "version": "[18.1.0.58, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
